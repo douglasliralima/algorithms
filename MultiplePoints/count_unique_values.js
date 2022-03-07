@@ -26,12 +26,12 @@ let result;
 
 result = CountUniqueValues([1,1,1,1,2,2])
 console.log(result)
-assert.equal(result, 2)
+assert.strictEqual(result, 2)
 
 result = CountUniqueValues([])
 console.log(result)
-assert.equal(result, 0)
+assert.strictEqual(result, 0)
 
 result = CountUniqueValues([1,1,1,1,2,2,3,5])
 console.log(result)
-assert.equal(result, 5)
+assert.strictEqual(result, 5)
