@@ -10,15 +10,13 @@ function CountUniqueValues(arr) {
     }
 
     let i = 0;
-    let scout = 1;
-    while (scout < arr.length) {
-        if (arr[i] === arr[scout]) {
-            scout += 1
-        } else {
+    for (scout = 1; scout < arr.length; scout++) {
+        if (arr[i] !== arr[scout]) {
             i += 1
             arr[i] = arr[scout];
         }
     }
+
     return i + 1;
 }
 
