@@ -1,22 +1,23 @@
-function collectOddValues(arr){
-    
+function collectOddValues(arr) {
+    //We need a helper function, since each iteration of this
+    //function would reset the result variable
     let result = [];
 
-    function helper(helperInput){
-        if(helperInput.length === 0) {
+    function helper(helperInput) {
+        if (helperInput.length === 0) {
             return;
         }
-        
-        if(helperInput[0] % 2 !== 0){
+
+        if (helperInput[0] % 2 !== 0) {
             result.push(helperInput[0])
         }
-        
+
         helper(helperInput.slice(1))
     }
-    
+
     helper(arr)
 
     return result;
 }
 
-collectOddValues([1,2,3,4,5,6,7,8,9])
+collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9])

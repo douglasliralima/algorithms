@@ -10,10 +10,12 @@ function CountUniqueValues(arr) {
     }
 
     let i = 0;
-    for (scout = 1; scout < arr.length; scout++) {
-        if (arr[i] !== arr[scout]) {
+    for (j = 1; j < arr.length; j++) {
+        if (arr[i] !== arr[j]) {
+            //We advance for a new position
             i += 1
-            arr[i] = arr[scout];
+            //We keep track the diffent ones in the array
+            arr[i] = arr[j];
         }
     }
 

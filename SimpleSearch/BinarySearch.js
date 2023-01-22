@@ -6,16 +6,16 @@ const assert = require("assert")
  * @param {number} value 
  */
 function BinarySearch(arr, value) {
-    let start = 0;
-    let end = arr.length - 1;
-    let middle = 0
-    while(start <= end) {
-        middle = Math.floor((end + start) / 2)
-        if(arr[middle] === value) return middle;
-        else if(value > arr[middle]) start = middle + 1;
-        else end = middle - 1; 
+    let left = 0;
+    let right = arr.length - 1;
+    let pivot = 0
+    while (left <= right) {
+        pivot = Math.floor((left + right) / 2)
+        if (arr[pivot] === value) return pivot;
+        else if (value > arr[pivot]) left = pivot + 1;
+        else right = pivot - 1;
     }
     return -1
 }
 
-console.log(BinarySearch([1,2,3,4,5,6], 1))
+console.log(BinarySearch([1, 2, 3, 4, 5, 6], 1))
