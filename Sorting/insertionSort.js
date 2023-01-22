@@ -20,9 +20,13 @@ function insertionSort(arr) {
             if (arr[j] < arr[j - 1]) {
                 swap(arr, j, j - 1);
             }
+            else {
+                console.log("ordered", arr, i, j, j - 1)
+                break
+            }
         }
     }
     return arr;
 }
 
-console.log(insertionSort([4001, 122, 55, 61]))
+console.log(insertionSort([4001, 122, 55, 61, 5000]))
