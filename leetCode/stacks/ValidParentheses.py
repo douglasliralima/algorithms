@@ -23,5 +23,5 @@ class Solution:
         return True
 
 solver = Solution()
-print(solver.isValid("()[]{}"))
+print(solver.isValid("()[]{\}"))
 print(solver.isValid("(]"))
